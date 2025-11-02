@@ -1,0 +1,17 @@
+{
+  "folders": [
+	{
+		"name": "public",
+		"path": "../../../01-starting-project/public"
+	},
+	{
+		"name": "01-rsc-client-cmp",
+		"path": "."
+	},
+	{
+		"name": "app",
+		"path": "../../../01-starting-project/app"
+	}
+],
+  "settings": {}
+}
