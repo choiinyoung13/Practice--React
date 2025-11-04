@@ -6,12 +6,12 @@ function App() {
       <section>
         <h2>Why work with us?</h2>
         <Accordion className="accordion">
-          <Accordion.Item className="accordion-item">
-            <Accordion.Title id="a1" className={'accordion-item-title'}>
+          <Accordion.Item id="a1" className="accordion-item">
+            <Accordion.Title className={'accordion-item-title'}>
               We got 20 years of experience
             </Accordion.Title>
 
-            <Accordion.Content id="a1" className="accordion-item-content">
+            <Accordion.Content className="accordion-item-content">
               <article>
                 <p>You can&apos;t go wrong with us.</p>
                 <p>
@@ -22,12 +22,12 @@ function App() {
             </Accordion.Content>
           </Accordion.Item>
 
-          <Accordion.Item className="accordion-item">
-            <Accordion.Title id="a2" className={'accordion-item-title'}>
+          <Accordion.Item id="a2" className="accordion-item">
+            <Accordion.Title className={'accordion-item-title'}>
               We're working with local guides
             </Accordion.Title>
 
-            <Accordion.Content id="a2" className="accordion-item-content">
+            <Accordion.Content className="accordion-item-content">
               <article>
                 <p>We are not doing this along from our office.</p>
                 <p>
