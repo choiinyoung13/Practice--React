@@ -1,4 +1,4 @@
-import { Children, useState } from 'react'
+import { Children, useRef, useState } from 'react'
 
 /**
  * SearchableList 컴포넌트 - Render Props 패턴 사용
@@ -10,9 +10,17 @@ import { Children, useState } from 'react'
  */
 export default function SearchableList({ items, children, itemKeyFn }) {
   const [searchTerm, setSearchTerm] = useState('')
+  const lastChange = useRef()
 
   function handleInputChange(event) {
-    setSearchTerm(event.target.value)
+    if (lastChange.current) {
+      clearTimeout(lastChange.current)
+    }
+
+    lastChange.current = setTimeout(() => {
+      lastChange.current = null
+      setSearchTerm(event.target.value)
+    }, 500)
   }
 
   // 검색어에 따라 items 필터링
