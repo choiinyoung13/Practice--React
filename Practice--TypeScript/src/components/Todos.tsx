@@ -1,13 +1,15 @@
-import React from 'react'
-// 클래스는 Type 역할도 함
-import Todo from '../models/todo'
+import { useContext } from 'react'
+import TodoItem from './TodoItem'
+import { TodosContext } from '../context/todos-context'
+import classes from './Todos.module.css'
 
-// React.FC<타입>: Props 타입을 정하는 레거시 방법
-const Todos: React.FC<{ items: Todo[] }> = props => {
+const Todos = () => {
+  const { items } = useContext(TodosContext)
+
   return (
-    <ul>
-      {props.items.map(item => (
-        <li key={item.id}>{item.text}</li>
+    <ul className={classes.todos}>
+      {items.map(item => (
+        <TodoItem key={item.id} id={item.id} text={item.text} />
       ))}
     </ul>
   )
